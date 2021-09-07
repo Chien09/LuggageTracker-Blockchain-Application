@@ -1,7 +1,7 @@
 # LuggageTracker-Blockchain-Application
 
 Luggage Tracking website application in utilizing blockchain system to store luggage transactions between destinations and airports. 
-The website allows passengers to track their luggage location. 
+The website allows passengers to track their luggage location and allows staffs to login and add luggages upon passenger checkin. 
 The website application is built using Django Framework and utilizing CI/CD from Heroku platform. 
 
 
