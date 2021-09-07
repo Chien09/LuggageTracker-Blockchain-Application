@@ -29,5 +29,11 @@ The website application is built using Django Framework and utilizing CI/CD from
 
 
 
+-----**Run Project**-----
+
+-To run the project, the virtual environment must be active, in command --> python3 manage.py runserver (copy the http link on to a browser) 
+
+
+
 
 
