@@ -19,7 +19,7 @@ The website application is built using Django Framework and utilizing CI/CD from
 
 -Install virtual environment command --> pip install virtualenv then command --> pip install virtualenvwrapper 
 
--To activate the virtual environment to the run the Django project in command --> source env/bin/activate 
+-To activate the virtual environment to run the Django project in command --> source env/bin/activate 
 
 -To deactivate the environment in command --> deactivate 
 
