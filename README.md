@@ -8,15 +8,23 @@ The website application is built using Django Framework and utilizing CI/CD from
 -----**Install virtual environment**-----
 
 -Need to install Django environment and virtual environment in order to run project
+
 -Install via "HomeBrew" command --> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 -Install pip manager for software packages command --> curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
+
 -Execute download command --> python3 get-pip.py 
+
 -Checking version pip - -version (check pip version)  or pip3  - -version
+
 -Install virtual environment command --> pip install virtualenv then command --> pip install virtualenvwrapper 
+
 -To activate the virtual environment to the run the Django project in command --> source env/bin/activate 
+
 -To deactivate the environment in command --> deactivate 
 
 -Installing Django into virtual environment in command --> pip install Django (NOTE: the virtual environment must be active) 
+
 -Check Django version in command -->django-admin - -version
 
 
