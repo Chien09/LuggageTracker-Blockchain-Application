@@ -1,0 +1,39 @@
+<!--this page rendered when user submits luggage tag ID from home.html page-->
+
+{% extends 'home.html' %} <!-- Will use the home.html-->
+
+{% block content %}
+    <div class="container" style="text-align:center;margin-top:10px">
+        <h1 class="display-6" style="margin-bottom:15px;">Luggage Information for Tag ID: # {{LuggageObject.tag_id}}</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bg-white p-2 border rounded px-3">
+                    <div class="d-flex flex-row justify-content-between align-items-center order">
+                        <div class="d-flex flex-column order-details">
+                            <span>Luggage Hash ID: {{Blockchain.hash_curr}}</span>
+                            <span class="date">Last Update: {{LuggageObject.time_stamp}} | Travel Information: (departure airport) {{LuggageObject.origin_airport}} to (destination airport) {{LuggageObject.destination_airport}} | Luggage Information: {{LuggageObject.description}}</span>
+                        </div>
+                        <div><button class="btn btn-outline-primary btn-sm disabled" type="button">Edit Luggage</button></div>
+                    </div>
+                    <hr class="divider mb-4">
+                    <div class="d-flex flex-row justify-content-between align-items-center align-content-center">
+                        <span class="{% if LuggageObject.status == 'Checked In' %} d-flex justify-content-center align-items-center big-dot {% endif %} dot"></span>
+                        <hr class="flex-fill {% if LuggageObject.status != 'Checked In' %} track-line {% endif %}"><span class="{% if LuggageObject.status == 'In Transit' %} d-flex justify-content-center align-items-center big-dot {% endif %} dot"></span>
+                        <hr class="flex-fill {% if LuggageObject.status != 'In Transit' and LuggageObject.status == 'Retrieved' or LuggageObject.status == 'Arrived At Destination' %} track-line {% endif %}"><span class="{% if LuggageObject.status == 'Arrived At Destination' %} d-flex justify-content-center align-items-center big-dot {% endif %} dot"></span>
+                        <hr class="flex-fill {% if LuggageObject.status == 'Retrieved' %} track-line {% endif %}"><span class="{% if LuggageObject.status == 'Retrieved' %} d-flex justify-content-center align-items-center big-dot {% endif %} dot"></span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <div class="d-flex flex-column align-items-start"><span>Checked In</span><span></span></div>
+                        <div class="d-flex flex-column align-items-center"><span>In Transit</span><span></span></div>
+                        <div class="d-flex flex-column align-items-center"><span>Arrived At Destination</span><span></span></div>
+                        <div class="d-flex flex-column align-items-end"><span>Retrieved By Passenger</span><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <span style="color: red;"><b>{% if LuggageObject.digital_signature != 'Awaiting Signature' and LuggageObject.digital_signature != 'Approved' %}IMPORTANT MESSAGE: You have a {{LuggageObject.digital_signature}} luggage, Please see an airline agent for more info {% endif %}</b></span>
+    </div>
+{% endblock %}

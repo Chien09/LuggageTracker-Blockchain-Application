@@ -1,0 +1,36 @@
+{% extends 'home.html' %} <!-- inherit home.html-->
+{% load static %} <!--Need to load static files to access images for img-->
+
+{% block content %}
+<div class="container" style="text-align:center;margin-top:10px">
+  <h1>Staff Login</h1>
+</div>
+
+<form action="login" method="POST">
+    {% csrf_token %} <!--to be able to use POST instead of GET-->
+
+    <div style="text-align:center;margin-top:10px">
+        <img class ="avatar" src="{% static 'images/Usericon.png' %}" /> 
+    </div>
+
+    <div class="container" style="text-align:center;margin-top:10px">
+      <b>Username : </b>
+      <input type="text" placeholder="Enter Username" name="Username" required> <br>
+
+      <br> 
+
+      <b>Password : </b>
+      <input type="password" placeholder="Enter Password" name="psw" required> <br>
+      <br>
+      <button class="btn btn-outline-success" type="submit">Sign in</button>
+    </div>
+</form>
+
+<!--Error message if cannot sign in-->
+<div style="text-align:center;margin-top:10px">
+  {% for message in messages %}
+  <h3 style="color:red;">{{message}}</h3>
+  {% endfor %}
+</div>
+
+{% endblock %}
