@@ -82,7 +82,7 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3', #this Django's own database if you want to use it
         'NAME' : 'luggage_tracker',  #database/schema name that you created on workbench
         'USER' : 'root', #user name by default is root for MYSQL database 
-        'PASSWORD' : 'SE491Spring', #change this password if you set your own password or none for your database
+        'PASSWORD' : 'password', #change this password if you set your own password or none for your database
         'PORT' : 3306,
         'HOST' : '127.0.0.1', 
     }
