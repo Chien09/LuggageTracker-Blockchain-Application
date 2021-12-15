@@ -5,7 +5,7 @@ The website allows passengers to track their luggage location and allows staffs 
 The website application is built using Django Framework and utilizing CI/CD from Heroku platform. 
 
 
------**Install virtual environment & Django Framework**-----
+-----**Install virtual environment & Django Framework (MAC)**-----
 
 -Need to install Django environment and virtual environment in order to run project
 
