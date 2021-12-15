@@ -44,14 +44,14 @@ The website application is built using Django Framework and utilizing CI/CD from
 ![Home](ReadMeImages/MainPage.jpg) 
 
 -Luggage information display based on search and also displays luggage Hash ID for demostration that luggage data are saved and appended into a blockchain. 
-![info](ReadMeImages/Luggage Info.jpg)
+![info](ReadMeImages/LuggageInfo.jpg)
 
 -Add luggage to database 
-![AddLuggage](ReadMeImages/Add Luggage.jpg)
+![AddLuggage](ReadMeImages/AddLuggage.jpg)
 
 -FAQ page 
 ![FAQ](ReadMeImages/FAQ.jpg)
 
 -Contact Us page
-![Contact](ReadMeImages/Contact us.jpg)
+![Contact](ReadMeImages/Contactus.jpg)
 
